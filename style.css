@@ -88,7 +88,7 @@ nav {
     gap: 2rem;
     list-style: none;
     font-size: var(--font-size-base);
-    font-weight: 300;
+    font-weight: 400;
 }
 
 a {
@@ -473,15 +473,17 @@ a:hover {
 }
 
 .btn {
-    font-weight: 100;
+    font-family: var(--font-family); 
+    font-size: var(--font-size-base);
+    font-weight: 400; 
     transition: all 300ms ease;
     width: 12rem;
-    border-radius: 24px;
-    padding: 16px 24px;
+    border-radius: 30px;
+    padding: 12px 24px;
     border: solid 1px var(--primary-color);
     background: none;
-    color: var(--primary-color); /* Cor de texto padrão do botão */
-    text-decoration: none; /* Para evitar que a decoração de link seja aplicada */
+    color: var(--primary-color); 
+    text-decoration: none; 
 }
 
 .btn:hover { 
@@ -498,7 +500,8 @@ a:hover {
     }
 
     .btn {
-        color: var(--primary-color); /* Manter a cor do texto igual ao padrão no mobile */
+        color: var(--primary-color); 
+        font-size: var(--font-size-base); 
     }
 }
 
