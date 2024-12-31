@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabrina Oliveira</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+
+
+<body>
+    <header>
+        <nav id="desktop-nav">
+            <div class="logo">Sabrina Oliveira</div>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutme.html">About me</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+        <nav id="hamburger-nav">
+            <div class="logo">Sabrina Oliveira</div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links">
+                    <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                    <li><a href="aboutme.html" onclick="toggleMenu()">About me</a></li>
+                    <li><a href="portfolio.html" onclick="toggleMenu()">Portfolio</a></li>
+                </div>
+            </div>
+        </nav>   
+        </header>
+
+
+    <section id="hero">
+        <div class="hero-container-white">
+            <div class="hero-content">
+                
+                <div class="hero-content-left">
+                    <div class="hero-container-pic">
+                        <img src="./assets/ProfilePic.jpg" alt="Sabrina Profile Picture">
+                    </div>
+                </div>
+
+                <div class="hero-content-right">
+                    <p>Hello, I'm Sabrina! :)</p>
+                    <p class="subtitle">
+                    Frontend Developer <br>
+                    & UI Designer</p>
+            
+                    <div class="btn-container">
+                    <button class="btn"onclick="location.href='#contact'">
+                    Contact
+                    </button>
+                    </div>
+                    <br>
+                    <div class="social-container">
+                    <i class="fa-brands fa-github-alt"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <i class="fa-brands fa-behance"></i>
+                    </div>       
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="aboutme">
+        <div class="project-container-gray">
+
+            <p class="subtitle">About me</p>
+            <br>
+            <br>
+            <br>
+            <div class="aboutme-content">
+                <p>
+                Hi, I'm Sabrina. My love for design started way back in the days of flogs and blogs around 2005, when I spent hours customizing layouts just for fun. It was my creative escape, and I never imagined it would turn into a career. Fast forward to 2017, I finally decided to take the leap and started working professionally as a UI Designer.<br>
+                <br>
+                Since then, I’ve been all about creating designs that don’t just look good but also work great. A few years in, I got curious about how those designs were actually built, and that’s how I got into web development. Now, I’m diving deep into JavaScript and React, combining my design background with coding to bring ideas to life on the web.
+                </p>
+                <div class="icons-container">
+                <i class="fa-brands fa-html5"></i>
+                <i class="fa-brands fa-css3-alt"></i>
+                <i class="fa-brands fa-js-square"></i>
+                <i class="fa-brands fa-react"></i>
+                <i class="fa-brands fa-bootstrap"></i>
+                <i class="fa-brands fa-git-alt"></i>
+                <i class="fa-brands fa-figma"></i>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-container-white">
+            <p class="subtitle">Let's work together! :)</p>
+            <br>
+            <p>sabrinapadalecki@gmail.com</p>
+            <br>
+            <div class="btn-container">
+                <button class="btn" onclick="window.open('https://www.linkedin.com/in/sabrina-oliveira-a64b6391/')">
+                    Linkedin
+                </button>
+                <button class="btn" onclick="window.open('https://github.com/imsabrinna')">
+                    Github
+                </button>
+                </div>
+                <br>
+                <div class="social-container">
+                <i class="fa-brands fa-github-alt" onclick="window.open('https://github.com/imsabrinna')"></i>
+                <i class="fa-brands fa-linkedin-in" onclick="window.open('https://www.linkedin.com/in/sabrina-oliveira-a64b6391/')"></i>
+                <i class="fa-brands fa-behance" onclick="window.open('https://www.behance.net/imsabrinna')"></i>
+                </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <footer>
+        <div class="footer-container">
+        <h6 class="footer-sign"> Copyright © 2024  -  Developed with <strong>love</strong> by Sabrina</h6>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
