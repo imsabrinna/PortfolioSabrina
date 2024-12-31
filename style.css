@@ -53,6 +53,17 @@ a, .btn {
     line-height: 36px;
 }
 
+@media (max-width: 1200px) {
+    a.btn {
+        color: var(--primary-color); /* Altere para a cor que você deseja */
+        text-decoration: none; /* Garantir que a decoração de link não apareça */
+    }
+
+    .btn {
+        color: var(--primary-color); /* Corrigir cor no mobile */
+    }
+}
+
 
 
 
@@ -469,6 +480,8 @@ a:hover {
     padding: 16px 24px;
     border: solid 1px var(--primary-color);
     background: none;
+    color: var(--primary-color); /* Cor de texto padrão do botão */
+    text-decoration: none; /* Para evitar que a decoração de link seja aplicada */
 }
 
 .btn:hover { 
@@ -482,6 +495,10 @@ a:hover {
         flex-direction: column;
         gap: 20px;
         padding: 24px;
+    }
+
+    .btn {
+        color: var(--primary-color); /* Manter a cor do texto igual ao padrão no mobile */
     }
 }
 
