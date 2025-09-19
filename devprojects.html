@@ -22,33 +22,33 @@
 
 <body>
     <header>
-        <nav id="desktop-nav">
-            <div class="logo">Sabrina Oliveira</div>
-            <div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="aboutme.html">About me</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                </ul>
-            </div>
+        <!-- Logo -->
+        <div class="header-container">
+        <div class="nav-logo">
+            <a href="index.html">Sabrina Oliveira</a>
+        </div>
+    
+        <!-- Navigation Links -->
+        <nav class="nav-links">
+            <a href="aboutme.html">About Me</a>
+            <a href="desprojects.html">UI/UX Projects</a>
+            <a href="devprojects.html">Dev Projects</a>
         </nav>
     
-        <nav id="hamburger-nav">
-            <div class="logo">Sabrina Oliveira</div>
-            <div class="hamburger-menu">
-                <div class="hamburger-icon" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="menu-links">
-                    <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
-                    <li><a href="aboutme.html" onclick="toggleMenu()">About me</a></li>
-                    <li><a href="portfolio.html" onclick="toggleMenu()">Portfolio</a></li>
-                </div>
-            </div>
-        </nav>   
-        </header>
+        <!-- Icons -->
+        <div class="nav-icons">
+            <i class="fa-brands fa-github-alt" onclick="window.open('https://github.com/imsabrinna')"></i>
+            <i class="fa-brands fa-linkedin-in" onclick="window.open('https://www.linkedin.com/in/sabrina-oliveira-a64b6391/')"></i>
+            <i class="fa-brands fa-behance" onclick="window.open('https://www.behance.net/imsabrinna')"></i>
+        </div>
+
+        <!-- Hamburger Icon Mobile -->
+        <div class="nav-hamburger">
+        <i id="hamburger" class="fa-solid fa-bars"></i>
+        </div>
+
+        </div>
+    </header>
 
     <section id="portfolio">
         <div class="project-container-gray">
@@ -59,7 +59,7 @@
             <br>
             <div class="project-content">
                 <div class="project-content-left">
-                    <p><strong>Responsive landing page</strong><br>
+                    <p><strong>Responsive Landing Page</strong><br>
                         This landing page was tailored to the client’s brand identity, featuring a lead capture form. Developed with a focus on clean code, usability, and responsiveness, it was built using HTML, CSS, and JavaScript to ensure an optimal user experience across all devices.
 
                     </p><br>
@@ -115,47 +115,6 @@
             </div>
         </div>
 
-        <div class="project-container-white">
-            <p class="subtitle">Design Portfolio</p>
-            <br>
-            <br>
-            <br>
-            <div class="project-content">
-                <div class="project-content-left">
-                    <div class="project-container-pic">
-                        <img src="./assets/VisualIdentityEDS.png" alt="Landing Page Deep Sthetics">
-                    </div>
-                </div>
-
-                <div class="project-content-right">
-                    <p><strong>EDS Manutenções</strong><br>
-                        Created the visual identity for EDS Manutenções, a company specializing in medical equipment maintenance. The design conveys trust, precision, and professionalism, incorporating elements that reflect the technical and reliable nature of the business.</p><br>
-                        <div class="btn-container">
-                            <button class="btn"onclick="window.open('https://www.behance.net/gallery/215762865/Branding-EDS')">Behance</button>
-                        </div>     
-                </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-container-gray">
-            <div class="project-content">
-                <div class="project-content-left">
-                    <p><strong>Deep Sthetics Visual Identity</strong><br>
-                        Designed the visual identity for Deep Sthetics, an online fitness store. The branding reflects a modern, energetic aesthetic with a focus on health and wellness, using a clean, professional design that aligns with the store’s target audience.</p><br>
-                        <div class="btn-container">
-                            <button class="btn"onclick="window.open('https://www.behance.net/gallery/202060899/Branding-Website')">Behance</button>
-                        </div>
-                </div>
-
-                <div class="project-content-right">
-                    <div class="project-container-pic">
-                        <img src="./assets/VisualIdentityDP.png" alt="Landing Page Deep Sthetics">
-                    </div>        
-                </div>
-                </div>
-            </div>
-        </div>
     </section>
 
     <section id="contact">
@@ -168,8 +127,8 @@
                 <button class="btn" onclick="window.open('https://www.linkedin.com/in/sabrina-oliveira-a64b6391/')">
                     Linkedin
                 </button>
-                <button class="btn" onclick="window.open('https://github.com/imsabrinna')">
-                    Github
+                <button class="btn" onclick="window.open('https://www.behance.net/imsabrinna')">
+                    Behance
                 </button>
                 </div>
                 <br>
@@ -188,7 +147,9 @@
 
     <footer>
         <div class="footer-container">
-        <h6 class="footer-sign"> Copyright © 2024  -  Developed with <strong>love</strong> by Sabrina</h6>
+            <h6 class="footer-sign">
+                © <span id="current-year"></span> - Developed with <strong>love</strong> by Sabrina
+            </h6>
         </div>
     </footer>
 

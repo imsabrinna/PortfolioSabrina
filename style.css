@@ -29,6 +29,7 @@
 
 body {
     font-family:"Montserrat", sans-serif;
+    background-color: var(--background-color);
 }
 
 html {
@@ -70,6 +71,23 @@ a, .btn {
 
 /* Header - Desktop Nav*/
 
+header {
+    display: flex;
+    align-items: center;         
+    justify-content: space-between; 
+    padding: 10px 20px;
+    flex-wrap: wrap;            
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    max-width: var(--container-width);
+}
+
 nav, .nav-links {
     display: flex;
 }
@@ -80,8 +98,11 @@ nav {
     height: 10vh;
 }
 
-.nav-logo img {
+.nav-logo {
     max-height: 50px;
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    cursor: default;  
 }
 
 .nav-links {
@@ -89,6 +110,11 @@ nav {
     list-style: none;
     font-size: var(--font-size-base);
     font-weight: 400;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 15px; /* espaço entre os ícones */
 }
 
 a {
@@ -104,15 +130,6 @@ a:hover {
     text-underline-offset: 1rem;
     text-decoration-color: var(--secondary-color);
     text-decoration-thickness: 1px;
-}
-
-.logo {
-    font-size: var(--font-size-base);
-    font-weight: 500;
-}
-
-.logo {
-    cursor: default;  
 }
 
 .nav-icons {
@@ -131,106 +148,135 @@ a:hover {
     color: var(--secondary-color);
 }
 
-/* Hamburger Menu */
 
-#hamburger-nav {
+
+
+
+/* Header Mobile Hamburger Icon */
+.nav-hamburger {
     display: none;
-}
-
-.hamburger-menu {
-    position: relative;
-    display: inline-block;
-}
-
-.hamburger-icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 24px;
-    width: 30px;
+    font-size: 1.5rem;
+    color: var(--primary-color);
     cursor: pointer;
 }
 
-.hamburger-icon span {
-    width: 100%;
-    height: 2px;
-    background-color:var(--primary-color);
-    transition: all 0.3 ease-in-out;
-}
+/* Mobile Styles */
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; /* Centraliza o logo */
+        align-items: center;
+        position: relative;
+    }
 
-.menu-links {
-    position: absolute;
-    top: 100%;
-    left: 0; /* Alinhar ao início da tela */
-    right: 0; /* Ocupa toda a largura */
-    width: 100%; /* Garantir largura total */
-    right: 0;
-    background-color: white;
-    width: fit-content;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.3 ease-in-out;
-    text-align: center; /* Centraliza os links */
-    padding: 0; /* Remover espaçamento interno */
-}
+    .nav-hamburger {
+        display: block; /* Exibe o ícone de hambúrguer no mobile */
+        position: absolute;
+        left: 20px;
+        z-index: 20; /* Alinha o ícone ao lado esquerdo */
+    }
 
-.menu-links a{
-    display: block;
-    padding: 10px;
-    padding: 10px 0; /* Espaçamento vertical consistente */
-    text-align: center;
-    font-size: var(--font-size-base);
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: all 0.3 ease-in-out;
+    .nav-logo {
+        position: static; /* Centraliza o logo no fluxo natural */
+        margin: 0 auto;
+    }
 
-}
+    .nav-icons {
+        display: flex; /* Garante que os ícones sejam exibidos */
+        position: absolute;
+        right: 20px; /* Posiciona os ícones no lado direito */
+        gap: 32px; /* Ajusta o espaçamento entre os ícones */
+    }
 
-.menu-links li{
-    list-style: none;
-    width: 100%; /* Garante que cada item ocupa a largura total */
-}
-
-.menu-links.open {
-    max-height: 300px;
-}
-
-.hamburger-icon.open span:first-child{
-    transform: rotate(45deg) translate(10px, 5px);
-}
-
-.hamburger-icon.open span:nth-child(2){
-    opacity: 0;
-}
-
-.hamburger-icon.open span:last-child{
-    transform: rotate(-45deg) translate(10px, -5px);
-}
-
-.hamburger-icon span:first-child {
-    transform: none;
-}
-
-.hamburger-icon span:first-child {
-    opacity: 1;
-}
-
-.hamburger-icon span:first-child {
-    transform: none;
-}
-
-
-@media screen and (max-width: 1200px) {
-    #desktop-nav {
+    .nav-icons i.fa-github-alt, i.fa-behance {
         display: none;
     }
-    #hamburger-nav {
-        display: flex;
+
+    .nav-hamburger i {
+        font-size: 1.5rem; /* Ajuste o valor conforme necessário */
+    }
+
+    .nav-links {
+        display: none; /* Oculta o menu inicialmente */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--background-color);
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        z-index: 10;
+    }
+
+    .nav-links.show {
+        display: flex; /* Mostra o menu quando ativo */
+    }
+
+    .nav-logo img {
+        max-height: 30px;
+        padding-top: 10px;
     }
 }
+
+
+
+
+
+
+
+
 
 
 /* Section Hero */
+
+.hero-container-home {
+    display: flex;
+    align-items: center; 
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    padding: 8rem 0rem;
+    max-width: var(--container-width);
+    width: 100%;
+  }
+
+  @media (max-width: 1140px) {
+    .hero-container-home {
+    flex-direction: column;
+    align-items: center;        
+    padding: 4rem 1rem;       
+    }
+  }
+
+  .hero-container-home h1 {
+    font-size: 4.5rem;
+    text-align: center;
+    width: 100%;     
+    color: var(--primary-color);
+    line-height: 1.4;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+  }
+
+  @media (max-width: 1140px) {
+    .hero-container-home h1 {
+    font-size: 2.5rem;     
+    width: 100%;            
+    text-align: center;  
+    }
+  }
+  
+  /* animação suave ao carregar a página */
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
 .hero-container-white {
     background-color: var(--background-color);
@@ -529,6 +575,7 @@ footer {
     font-size: var(--font-size-small);
     font-weight: 300;
     margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* .footer-sign strong {
