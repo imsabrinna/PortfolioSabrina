@@ -155,7 +155,7 @@ a:hover {
 /* Header Mobile Hamburger Icon */
 .nav-hamburger {
     display: none;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     color: var(--primary-color);
     cursor: pointer;
 }
@@ -168,25 +168,31 @@ a:hover {
         justify-content: center; /* Centraliza o logo */
         align-items: center;
         position: relative;
+        height: 80px;
     }
 
     .nav-hamburger {
         display: block; /* Exibe o ícone de hambúrguer no mobile */
         position: absolute;
-        left: 20px;
+        left: 40px;
         z-index: 20; /* Alinha o ícone ao lado esquerdo */
     }
 
     .nav-logo {
         position: static; /* Centraliza o logo no fluxo natural */
         margin: 0 auto;
+        font-size: 18px;
     }
 
     .nav-icons {
-        display: flex; /* Garante que os ícones sejam exibidos */
+        display: flex;
         position: absolute;
-        right: 20px; /* Posiciona os ícones no lado direito */
-        gap: 32px; /* Ajusta o espaçamento entre os ícones */
+        right: 40px;
+        gap: 32px;
+    }
+
+    .nav-icons i {
+        font-size: 1.5rem; 
     }
 
     .nav-icons i.fa-github-alt, i.fa-behance {
@@ -446,7 +452,7 @@ a:hover {
 
     /* Inverter ordem no container gray */
     .project-container-gray .project-content {
-        flex-direction: column-reverse;
+        /* flex-direction: column-reverse; */
     }
 
     /* Manter fluxo natural no container white */
